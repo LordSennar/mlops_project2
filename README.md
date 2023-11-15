@@ -29,12 +29,12 @@ docker build -t mlops_project2 .
 ```
 
 ### 3. Run the Docker Container
-Replace <your-wandb-api-key> with the key you got from your wandb project. (40 Characters long)
+Replace `<your-wandb-api-key>` with the key you got from your wandb project. (40 Characters long)
 Or replace the key directly in the Dockerfile, then it isnt needed in this command.
 ```bash
 docker run -e WANDB_API_KEY=<your-wandb-api-key> -e VARIABLE=Value mlops_project2
 ```
-replace VARIABLE with a variable from the list below.
+replace `VARIABLE` with a variable from the list below.
 
 #### Variables for Run
 

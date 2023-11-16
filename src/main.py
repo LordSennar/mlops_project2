@@ -3,19 +3,19 @@ import wandb
 from model_train import ModelTrain
 
 def main():
-    parser = argparse.ArgumentParser(description="Runs a single training run of the GLUETransformerModel")
-    parser.add_argument("-lr", dest="learning_rate", type=float, default=1e-4, help="The learning rate used for training. Default is 1e-4")
-    parser.add_argument("-adam_epsilon", dest="adam_epsilon", type=float, default=1e-8, help="The Adam epsilon used for training. Default is 1e-8")
-    parser.add_argument("-project_name", dest="project_name", default="default_project", help="The project name used in weights and biases. Default is 'default_project'")
-    parser.add_argument("-train_batch_size", dest="train_batch_size", type=int, default=32, help="The training batch size. Default is 32")
-    parser.add_argument("-val_batch_size", dest="val_batch_size", type=int, default=64, help="The validation batch size. Default is 64")
-    parser.add_argument("-epochs", dest="epochs", type=int, default=3, help="The number of training epochs. Default is 3")
-    parser.add_argument("-warmup_steps", dest="warmup_steps", type=int, default=0, help="The number of warmup steps. Default is 0")
-    parser.add_argument("-weight_decay", dest="weight_decay", type=float, default=0, help="The weight decay parameter. Default is 0")
-    parser.add_argument("-log_step_interval", dest="log_step_interval", type=int, default=50, help="The logging step interval. Default is 50")
-    parser.add_argument("-seed", dest="seed", type=int, default=42, help="The random seed for reproducibility. Default is 42")
-    parser.add_argument("-model_save_path", dest="model_save_path", default="models/", help="The path to save the trained model. Default is 'models/'")
-    parser.add_argument("-wandb_key", dest="wandb_key", required=True, help="WandB API key")
+    parser = argparse.ArgumentParser(description="Runs GLUETransformer once")
+    parser.add_argument("-lr", dest="learning_rate", type=float, default=1e-4, help="Learning rate used for training. Default is 1e-4")
+    parser.add_argument("-adam_epsilon", dest="adam_epsilon", type=float, default=1e-8, help="Adam epsilon for training. Default is 1e-8")
+    parser.add_argument("-project_name", dest="project_name", default="project2", help="Project name used in weights and biases. Default is 'project2'")
+    parser.add_argument("-train_batch_size", dest="train_batch_size", type=int, default=128, help="Training batch size. Default is 128")
+    parser.add_argument("-val_batch_size", dest="val_batch_size", type=int, default=128, help="Validation batch size. Default is 128")
+    parser.add_argument("-epochs", dest="epochs", type=int, default=3, help="Number of training epochs. Default is 3")
+    parser.add_argument("-warmup_steps", dest="warmup_steps", type=int, default=2, help="Number of warmup steps. Default is 2")
+    parser.add_argument("-weight_decay", dest="weight_decay", type=float, default=0.001, help="Weight decay parameter. Default is 1e-3")
+    parser.add_argument("-log_step_interval", dest="log_step_interval", type=int, default=50, help="Logging step interval. Default is 50")
+    parser.add_argument("-seed", dest="seed", type=int, default=42, help="Random seed for reproducibility. Default is 42")
+    parser.add_argument("-model_save_path", dest="model_save_path", default="models/", help="Path to save the trained model. Default is 'models/'")
+    parser.add_argument("-wandb_key", dest="wandb_key", required=True, help="Weights and Biases API key")
 
     args = parser.parse_args()
 

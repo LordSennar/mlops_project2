@@ -11,9 +11,9 @@ RUN pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir -r re
 
 ENV LEARNING_RATE=0.0001 `
     ADAM_EPSILON=0.00000001 `
-    PROJECT_NAME=default_project `
-    TRAIN_BATCH_SIZE=32 `
-    VAL_BATCH_SIZE=32 `
+    PROJECT_NAME=project2 `
+    TRAIN_BATCH_SIZE=128 `
+    VAL_BATCH_SIZE=128 `
     EPOCHS=3 `
     WARMUP_STEPS=2 `
     WEIGHT_DECAY=0.003 `

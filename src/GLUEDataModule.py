@@ -46,8 +46,8 @@ class GLUEDataModule(LightningDataModule):
         model_name_or_path: str,
         task_name: str = "mrpc",
         max_seq_length: int = 128,
-        train_batch_size: int = 32,
-        eval_batch_size: int = 32,
+        train_batch_size: int = 128,
+        eval_batch_size: int = 128,
         **kwargs,
     ):
         super().__init__()

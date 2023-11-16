@@ -12,11 +12,11 @@ class ModelTrain:
     def __init__(self,
                  project_name: str = "GLUETransformer",
                  model_save_path: Path = "",
-                 train_batch_size: int = 32,
-                 val_batch_size: int = 32,
+                 train_batch_size: int = 128,
+                 val_batch_size: int = 128,
                  epochs: int = 3,
-                 warmup_steps: int = 0,
-                 weight_decay: int = 0,
+                 warmup_steps: int = 2,
+                 weight_decay: int = 0.001,
                  log_step_interval: int = 50,
                  seed: int = 42):
         if not model_save_path:
